@@ -54,7 +54,7 @@ export default function MatchesPage() {
     return generatedMatches.sort((a, b) => b.confidence - a.confidence);
   }, [records]);
 
-  const handleStatusUpdate = (matchId: string, status: 'Approved' | 'Rejected') => {
+  const handleStatusUpdate = (matchId: string, status: 'Pending' | 'Approved' | 'Rejected') => {
     setMatchStatuses(prev => ({ ...prev, [matchId]: status }));
   };
 
