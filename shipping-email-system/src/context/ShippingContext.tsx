@@ -63,7 +63,7 @@ export function ShippingProvider({ children }: { children: ReactNode }) {
     sampleEmails.forEach((sample, index) => {
       const category = categorizeEmail(sample.body);
       const emailId = `email-${Date.now()}-${index}`;
-      const parsedRecords = parseMaritimeEmail(sample.body, category, emailId);
+      const parsedRecords = parseMaritimeEmail(sample.body, emailId);
       
       newEmails.push({
         id: emailId,
