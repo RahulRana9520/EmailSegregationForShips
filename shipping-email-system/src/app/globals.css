@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f4f4f0;
+  --foreground: #111111;
+  --color-neo-yellow: #fde047;
+  --color-neo-cyan: #67e8f9;
+  --color-neo-pink: #f9a8d4;
+  --color-neo-green: #86efac;
+  --color-neo-purple: #c084fc;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  
+  --color-neo-yellow: var(--color-neo-yellow);
+  --color-neo-cyan: var(--color-neo-cyan);
+  --color-neo-pink: var(--color-neo-pink);
+  --color-neo-green: var(--color-neo-green);
+  --color-neo-purple: var(--color-neo-purple);
+
+  /* Neo-brutalist borders and shadows */
+  --shadow-neo: 4px 4px 0px 0px #111111;
+  --shadow-neo-hover: 2px 2px 0px 0px #111111;
+  --shadow-neo-lg: 8px 8px 0px 0px #111111;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  /* A bold modern font */
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Base utility classes for Neo-brutalism */
+@layer utilities {
+  .neo-border {
+    border: 3px solid #111;
+  }
+  
+  .neo-shadow {
+    box-shadow: 4px 4px 0px 0px #111;
+  }
+  
+  .neo-shadow-hover:hover {
+    box-shadow: 2px 2px 0px 0px #111;
+    transform: translate(2px, 2px);
+    transition: all 0.1s ease;
+  }
+
+  .neo-card {
+    background-color: white;
+    border: 3px solid #111;
+    box-shadow: 4px 4px 0px 0px #111;
+    border-radius: 8px; /* Slight radius or keep sharp for brutalism */
+    padding: 1.5rem;
+  }
+}
